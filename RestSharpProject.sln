@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpProject", "RestSharpProject\RestSharpProject.csproj", "{4047CB21-8E17-4A22-8A20-66DBD905C7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITests", "APITests\APITests.csproj", "{64B734DA-D15D-4F19-9050-0688B87D0F0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4047CB21-8E17-4A22-8A20-66DBD905C7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4047CB21-8E17-4A22-8A20-66DBD905C7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4047CB21-8E17-4A22-8A20-66DBD905C7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4047CB21-8E17-4A22-8A20-66DBD905C7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B734DA-D15D-4F19-9050-0688B87D0F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B734DA-D15D-4F19-9050-0688B87D0F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B734DA-D15D-4F19-9050-0688B87D0F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B734DA-D15D-4F19-9050-0688B87D0F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

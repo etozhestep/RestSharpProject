@@ -1,0 +1,12 @@
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.csproj.AssemblyReference.cache
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.AssemblyInfoInputs.cache
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.AssemblyInfo.cs
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.csproj.CoreCompileInputs.cache
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\bin\Debug\net7.0\RestSharpProject.deps.json
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\bin\Debug\net7.0\RestSharpProject.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\bin\Debug\net7.0\RestSharpProject.pdb
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\refint\RestSharpProject.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\RestSharpProject.pdb
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\RestSharpProject\obj\Debug\net7.0\ref\RestSharpProject.dll
