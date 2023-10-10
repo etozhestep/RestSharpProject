@@ -24,6 +24,16 @@ public static class ApiSteps
         return ApiHelper<PostUser>.GetContent<PostUser>(response);
     }
 
+    public static Login? LoginStep(string requestBody)
+    {
+        var user = new ApiHelper<Login>();
+        var client = user.SetUrl("api/login");
+        var request = user.CreatePostRequest(requestBody);
+        user.GetResponse(client, request);
+        var response = client.Execute(user.CreatePostRequest(requestBody));
+        return ApiHelper<Login>.GetContent<Login>(response);
+    }
+
     public static UpdateUser? UpdateUserStep(string requestBody)
     {
         var user = new ApiHelper<UpdateUser>();

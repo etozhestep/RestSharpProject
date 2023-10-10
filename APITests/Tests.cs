@@ -52,4 +52,25 @@ public class Tests
     {
         Assert.That(ApiSteps.DeleteStep().ToString(), Does.Match("204"));
     }
+
+    [Test]
+    public void LoginSuccessful()
+    {
+        const string requestBody = @"{
+                     ""email"": ""eve.holt@reqres.in"",
+                     ""password"": ""cityslicka""
+                                      }";
+        var response = ApiSteps.LoginStep(requestBody);
+        Assert.That(response!.Token, Does.Match("QpwL5tke4Pnpja7X4"));
+    }
+
+    [Test]
+    public void LoginUnsuccessful()
+    {
+        const string requestBody = @"{
+                     ""email"": ""eve.holt@reqres.in""
+                                      }";
+        var response = ApiSteps.LoginStep(requestBody);
+        Assert.That(response!.Error, Does.Match("Missing password"));
+    }
 }
