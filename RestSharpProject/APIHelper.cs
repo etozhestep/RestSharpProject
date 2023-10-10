@@ -38,21 +38,21 @@ public class ApiHelper<T>
         return restRequest;
     }
 
-    public RestRequest DeleteRequest()
+    public RestRequest CreateDeleteRequest()
     {
         var restRequest = new RestRequest(Method.DELETE);
         return restRequest;
     }
 
-    public IRestResponse GetResponse(RestClient client, RestRequest request)
-    {
-        return client.Execute(request);
+    public void GetResponse(RestClient client, RestRequest request)
+    { 
+        client.Execute(request);
     }
 
     public static T? GetContent<T>(IRestResponse response)
     {
         var content = response.Content;
-        var tObject = response.Content.Length < 1 ? default : JsonConvert.DeserializeObject<T>(content);
+        var tObject = JsonConvert.DeserializeObject<T>(content);
         return tObject;
     }
 }

@@ -48,9 +48,9 @@ public static class ApiSteps
     {
         var user = new ApiHelper<ListOfUsers>();
         var client = user.SetUrl("api/users/2");
-        var request = user.DeleteRequest();
+        var request = user.CreateDeleteRequest();
         user.GetResponse(client, request);
-        var response = client.Execute(user.DeleteRequest());
+        var response = client.Execute(user.CreateDeleteRequest());
         return (int)response.StatusCode;
     }
 }

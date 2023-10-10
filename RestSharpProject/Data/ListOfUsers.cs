@@ -10,7 +10,7 @@ public class ListOfUsers
     public Support Support { get; set; }
 }
 
-public abstract class Datum
+public class Datum
 {
     public long Id { get; set; }
     public string Email { get; set; }
@@ -19,7 +19,7 @@ public abstract class Datum
     public Uri Avatar { get; set; }
 }
 
-public abstract class Support
+public class Support
 {
     public Uri Url { get; set; }
     public string Text { get; set; }
