@@ -44,9 +44,9 @@ public class ApiHelper<T>
         return restRequest;
     }
 
-    public void GetResponse(RestClient client, RestRequest request)
+    public IRestResponse GetResponse(RestClient client, RestRequest request)
     { 
-        client.Execute(request);
+       return client.Execute(request);
     }
 
     public static T? GetContent<T>(IRestResponse response)
