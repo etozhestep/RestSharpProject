@@ -1,3 +1,4 @@
+using System.Net;
 using NUnit.Framework;
 using RestSharpProject;
 
@@ -45,7 +46,7 @@ public class Tests
     [Test]
     public void Delete()
     {
-        Assert.That(ApiSteps.DeleteStep().ToString(), Does.Match("204"));
+        Assert.That(ApiSteps.DeleteStep().StatusCode == HttpStatusCode.NoContent);
     }
 
     [Test]

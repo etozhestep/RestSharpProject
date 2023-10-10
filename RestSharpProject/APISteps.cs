@@ -1,4 +1,5 @@
-﻿using RestSharpProject.Data;
+﻿using RestSharp;
+using RestSharpProject.Data;
 
 namespace RestSharpProject;
 
@@ -40,13 +41,13 @@ public static class ApiSteps
         return ApiHelper<UpdateUser>.GetContent<UpdateUser>(response);
     }
 
-    public static int DeleteStep()
+    public static IRestResponse DeleteStep()
     {
         var user = new ApiHelper<ListOfUsers>();
         var client = user.SetUrl("api/users/2");
         var request = user.CreateDeleteRequest();
         var response = user.GetResponse(client, request);
-        return (int)response.StatusCode;
+        return response;
     }
     
 }
