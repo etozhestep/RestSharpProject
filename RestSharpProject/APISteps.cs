@@ -11,7 +11,7 @@ public static class ApiSteps
         var client = user.SetUrl("api/users?page=2");
         var request = user.CreateGetRequest();
         var response = user.GetResponse(client, request);
-        return ApiHelper<ListOfUsers>.GetContent<ListOfUsers>(response);
+        return ApiHelper<ListOfUsers>.GetContent(response);
     }
 
     public static PostUser? PostUserStep(string requestBody)
@@ -20,7 +20,7 @@ public static class ApiSteps
         var client = user.SetUrl("api/users");
         var request = user.CreatePostRequest(requestBody);
         var response = user.GetResponse(client, request);
-        return ApiHelper<PostUser>.GetContent<PostUser>(response);
+        return ApiHelper<PostUser>.GetContent(response);
     }
 
     public static Login? LoginStep(string requestBody)
@@ -29,7 +29,7 @@ public static class ApiSteps
         var client = user.SetUrl("api/login");
         var request = user.CreatePostRequest(requestBody);
         var response = user.GetResponse(client, request);
-        return ApiHelper<Login>.GetContent<Login>(response);
+        return ApiHelper<Login>.GetContent(response);
     }
 
     public static UpdateUser? UpdateUserStep(string requestBody)
@@ -38,7 +38,7 @@ public static class ApiSteps
         var client = user.SetUrl("api/users/2");
         var request = user.CreatePutRequest(requestBody);
         var response = user.GetResponse(client, request);
-        return ApiHelper<UpdateUser>.GetContent<UpdateUser>(response);
+        return ApiHelper<UpdateUser>.GetContent(response);
     }
 
     public static IRestResponse DeleteStep()

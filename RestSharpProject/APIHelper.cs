@@ -49,7 +49,7 @@ public class ApiHelper<T>
        return client.Execute(request);
     }
 
-    public static T? GetContent<T>(IRestResponse response)
+    public static T? GetContent(IRestResponse response)
     {
         var content = response.Content;
         var tObject = JsonConvert.DeserializeObject<T>(content);

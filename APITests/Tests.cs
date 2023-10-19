@@ -10,14 +10,14 @@ public class Tests
     public void VerifyPageListOfUsers()
     {
         var response = ApiSteps.GetUsersStep();
-        Assert.That(response!.Page, Is.EqualTo(2));
+        Assert.That(response?.Page, Is.EqualTo(2));
     }
 
     [Test]
     public void VerifyNameListOfUsers()
     {
         var response = ApiSteps.GetUsersStep();
-        Assert.That(response!.Data[1].First_Name, Is.EqualTo("Lindsay"));
+        Assert.That(response?.Data[1].First_Name, Is.EqualTo("Lindsay"));
     }
 
     [Test]
@@ -29,7 +29,7 @@ public class Tests
                                 }";
 
         var response = ApiSteps.PostUserStep(requestBody);
-        Assert.That(response!.Name, Is.EqualTo("morpheus"));
+        Assert.That(response?.Name, Is.EqualTo("morpheus"));
     }
 
     [Test]
@@ -40,7 +40,7 @@ public class Tests
                      ""job"": ""zion resident""
                                 }";
         var response = ApiSteps.UpdateUserStep(requestBody);
-        Assert.That(response!.UpdatedAt.ToString(), Does.Contain(DateTimeOffset.Now.DateTime.Minute.ToString()));
+        Assert.That(response?.UpdatedAt.ToString(), Does.Contain(DateTimeOffset.Now.DateTime.Minute.ToString()));
     }
 
     [Test]
@@ -57,7 +57,7 @@ public class Tests
                      ""password"": ""cityslicka""
                                       }";
         var response = ApiSteps.LoginStep(requestBody);
-        Assert.That(response!.Token, Does.Match("QpwL5tke4Pnpja7X4"));
+        Assert.That(response?.Token, Does.Match("QpwL5tke4Pnpja7X4"));
     }
 
     [Test]
@@ -67,6 +67,6 @@ public class Tests
                      ""email"": ""eve.holt@reqres.in""
                                       }";
         var response = ApiSteps.LoginStep(requestBody);
-        Assert.That(response!.Error, Does.Match("Missing password"));
+        Assert.That(response?.Error, Does.Match("Missing password"));
     }
 }
