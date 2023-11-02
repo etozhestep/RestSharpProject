@@ -1,10 +1,14 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using NUnit.Allure.Attributes;
+using RestSharp;
+using RestSharpProject.Builder;
 using RestSharpProject.Data;
 
 namespace RestSharpProject;
 
 public static class ApiSteps
 {
+    [AllureStep("Get Users Step")]
     public static ListOfUsers? GetUsersStep()
     {
         var user = new ApiHelper<ListOfUsers>();
@@ -14,6 +18,7 @@ public static class ApiSteps
         return ApiHelper<ListOfUsers>.GetContent(response);
     }
 
+    [AllureStep("Post User Step")]
     public static PostUser? PostUserStep(string requestBody)
     {
         var user = new ApiHelper<PostUser>();
@@ -23,15 +28,22 @@ public static class ApiSteps
         return ApiHelper<PostUser>.GetContent(response);
     }
 
-    public static Login? LoginStep(string requestBody)
+    [AllureStep("Login Step")]
+    public static Login? LoginStep(string email, string? pass)
     {
+        var requestBody = new User.UserBuilder()
+            .WithEmail(email)
+            .WithPassword(pass)
+            .Build();
         var user = new ApiHelper<Login>();
         var client = user.SetUrl("api/login");
-        var request = user.CreatePostRequest(requestBody);
+        var i = JsonConvert.SerializeObject(requestBody);
+        var request = user.CreatePostRequest(JsonConvert.SerializeObject(requestBody));
         var response = user.GetResponse(client, request);
         return ApiHelper<Login>.GetContent(response);
     }
 
+    [AllureStep("Update User Step")]
     public static UpdateUser? UpdateUserStep(string requestBody)
     {
         var user = new ApiHelper<UpdateUser>();
@@ -41,6 +53,7 @@ public static class ApiSteps
         return ApiHelper<UpdateUser>.GetContent(response);
     }
 
+    [AllureStep("Delete User Step")]
     public static IRestResponse DeleteStep()
     {
         var user = new ApiHelper<ListOfUsers>();
@@ -49,5 +62,4 @@ public static class ApiSteps
         var response = user.GetResponse(client, request);
         return response;
     }
-    
 }

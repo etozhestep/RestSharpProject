@@ -101,3 +101,7 @@ C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\obj\Deb
 C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\obj\Debug\net7.0\APITests.pdb
 C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\obj\Debug\net7.0\APITests.genruntimeconfig.cache
 C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\obj\Debug\net7.0\ref\APITests.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\bin\Debug\net7.0\Allure.Net.Commons.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\bin\Debug\net7.0\Allure.NUnit.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\bin\Debug\net7.0\AspectInjector.Broker.dll
+C:\Users\Andrei_Stsiapaniuk\Documents\Projects\RestSharpProject\APITests\bin\Debug\net7.0\MimeTypesMap.dll

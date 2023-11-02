@@ -1,12 +1,16 @@
 using System.Net;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using RestSharpProject;
 
 namespace APITests;
 
+[AllureNUnit]
 public class Tests
 {
     [Test]
+    [AllureDescription("Verifying list of users")]
     public void VerifyPageListOfUsers()
     {
         var response = ApiSteps.GetUsersStep();
@@ -52,21 +56,14 @@ public class Tests
     [Test]
     public void LoginSuccessful()
     {
-        const string requestBody = @"{
-                     ""email"": ""eve.holt@reqres.in"",
-                     ""password"": ""cityslicka""
-                                      }";
-        var response = ApiSteps.LoginStep(requestBody);
+        var response = ApiSteps.LoginStep("eve.holt@reqres.in","cityslicka");
         Assert.That(response?.Token, Does.Match("QpwL5tke4Pnpja7X4"));
     }
 
     [Test]
     public void LoginUnsuccessful()
     {
-        const string requestBody = @"{
-                     ""email"": ""eve.holt@reqres.in""
-                                      }";
-        var response = ApiSteps.LoginStep(requestBody);
+        var response = ApiSteps.LoginStep("eve.holt@reqres.in","");
         Assert.That(response?.Error, Does.Match("Missing password"));
     }
 }

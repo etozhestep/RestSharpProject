@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Andrei_Stsiapaniuk\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAspectInjector Condition=" '$(PkgAspectInjector)' == '' ">C:\Users\Andrei_Stsiapaniuk\.nuget\packages\aspectinjector\2.8.1</PkgAspectInjector>
+  </PropertyGroup>
 </Project>
